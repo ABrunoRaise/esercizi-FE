@@ -2,33 +2,33 @@ var app = new function(){
     this.userView = document.getElementById("userList");
 
     this.users = [
-        new User('Andrea','Raise'),
-        new User('Matteo','Trentin')
+        new User('Andrea')
     ];
 
     this.showList = function(){
         data = ''
         this.users.forEach(function(user,i) {
         data += '<div class = "userDiv">';
-        data +=  user.name + ' ' + user.lastname
+        data += '<text>';
+        data +=  user.name ;
+        data += '</text>';
         data += '<button onclick="app.Edit(' + i + ')">Edit</button>';
         data += '<button onclick="app.Delete(' + i + ')">Delete</button>';
-        data += '<div>';
+        data += '</div>';
         });
         return this.userView.innerHTML = data;
     };
 
     this.Add = function () {
         elName = document.getElementById('add-name');
-        elLastname = document.getElementById('add-lastname')
         // Get the value
-        var userToAdd = new User(elName.value,elLastname.value)
-        if (userToAdd) {
+        
+        if (elName.value) {
+          var userToAdd = new User(elName.value)
           // Add the new value
           this.users.push(userToAdd);
           // Reset input value
           elName.value = '';
-          elLastname.value = '';
           // Dislay the new list
           this.showList();
         }
@@ -36,18 +36,16 @@ var app = new function(){
 
     this.Edit = function (item) {
         var elName = document.getElementById('edit-name');
-        var elLastname = document.getElementById('edit-lastname')
         // Display value in the field
         var userToUpdate = this.users[item];
         elName.value = userToUpdate.name;
-        elLastname.value = userToUpdate.lastname;
         // Display fields
         document.getElementById('spoiler').style.display = 'block';
         self = this;
     
         document.getElementById('saveEdit').onsubmit = function() {
           // Get value
-          var userUpdated = new User(elName.value,elLastname.value);
+          var userUpdated = new User(elName.value);
     
           if (userUpdated) {
             // Edit value

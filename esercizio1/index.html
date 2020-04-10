@@ -14,22 +14,16 @@
 
     <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
       <input type="text" id="add-name" placeholder="Name">
-      <input type="text" id="add-lastname" placeholder="Lastname">
-      <input type="submit" value="Add">
+      <input class= "submitButton" type="submit" value="Add">
     </form>
 
     <div id="spoiler" role="aria-hidden">
       <form action="javascript:void(0);" method="POST" id="saveEdit" onsubmit="app.Edit()">
         <input type="text" id="edit-name">
-        <input type="text" id="edit-lastname">
-        <input type="submit" value="Edit" /></a>
+        <input class= "submitButton"  type="submit" value="Edit" /></a>
       </form>
     </div>
 
-    <p>User List</p>
-
-    
-    
     <div id="userList"></div>
     <script type="text/javascript" src="user.js"></script>
     <script type="text/javascript" src="app.js"></script>
