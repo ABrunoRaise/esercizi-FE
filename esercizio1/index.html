@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User list</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Cinzel+Decorative:700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+      <input type="text" id="add-name" placeholder="Name">
+      <input class= "submitButton" type="submit" value="Add">
+    </form>
+
+    <div id="spoiler" role="aria-hidden">
+      <form action="javascript:void(0);" method="POST" id="saveEdit" onsubmit="app.Edit()">
+        <input type="text" id="edit-name">
+        <input class= "submitButton"  type="submit" value="Edit" /></a>
+      </form>
+    </div>
+
+    <div id="userList"></div>
+    <script type="text/javascript" src="user.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
