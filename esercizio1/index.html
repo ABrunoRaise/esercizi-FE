@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <title>User list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Cinzel+Decorative:700" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -20,24 +21,30 @@
     
 
     <div class="container">
-      <div class="col ">
+      <div class="col " >
         <div class="row row-form" >
             <form class="form-input input-group mb-3" action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
-              <div class="form-group mx-sm-3 mb-2">
+              <div class=" label-input form-group mx-sm-3 mb-2">
                 <label for="add-name" class="sr-only">Name</label>
                 <input type="text" class="form-control" id="add-name" placeholder="Name">   
               </div>
-              <input class= "btn btn-primary mb-2 submitButton" type="submit" value="Add">
+              <button class= "button-input btn btn-primary mb-2" type="submit">
+                <span class="text"> Add </span>
+                <span class="icon fa fa-plus"></span>
+              </button>
             </form>
         </div>
         
         <div id = "spoiler" class="row row-form">
           <form id="saveEdit"  class="form-input input-group mb-3" action="javascript:void(0);" method="POST" onsubmit="app.Edit()"> 
-            <div class="form-group mx-sm-3 mb-2">
+            <div class="label-input form-group mx-sm-3 mb-2">
               <label for="edit-name" class="sr-only">Name</label>
               <input type="text" class="form-control" id="edit-name" placeholder="Name">   
             </div>
-            <input class= "btn btn-primary mb-2 submitButton" type="submit" value="Edit">
+            <button class= "button-input btn btn-primary mb-2" type="submit">
+              <span class="text"> Edit </span>
+              <span class="icon fa fa-pencil-square-o"aria-hidden="true"></span>  
+            </button>
           </form>
         </div>
 

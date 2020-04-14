@@ -13,8 +13,14 @@ var app = new function(){
         data += '<text>';
         data +=  user.name ;
         data += '</text>';
-        data += '<button class = "btn btn-primary" onclick="app.Edit(' + i + ')">Edit</button>';
-        data += '<button class = "btn btn-primary" onclick="app.Delete(' + i + ')">Delete</button>';
+        data += '<button class = "btn btn-primary" onclick="app.Edit(' + i + ')">';
+        data += '<span class="text"> Edit </span>';
+        data += '<span class="icon fa fa-pencil-square-o"aria-hidden="true"></span>';
+        data += '</button>';
+        data += '<button class = "btn btn-primary" onclick="app.Delete(' + i + ')">';
+        data += '<span class="text"> Delete </span>';
+        data += '<span class="icon fa fa-trash"aria-hidden="true"></span>';
+        data += '</button>';
         data += '</div>';
         data += '</a>';
         });
